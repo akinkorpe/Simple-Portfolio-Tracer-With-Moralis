@@ -1,0 +1,306 @@
+# ===================================
+# Portfolio Tracker - Professional .gitignore
+# React + Node.js + Moralis Integration
+# ===================================
+
+# ===================================
+# Dependencies & Package Managers
+# ===================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package manager lock files (keep package-lock.json for version control)
+# yarn.lock
+# pnpm-lock.yaml
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# ===================================
+# React & Build Artifacts
+# ===================================
+build/
+dist/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+
+# Static files
+public/static/
+static/
+
+# ===================================
+# Environment Variables & API Keys
+# ===================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+
+# Moralis API Keys (Critical Security)
+.env.moralis
+moralis.config.js
+moralis-config.json
+
+# Other API configurations
+config/keys.js
+config/production.json
+config/development.json
+
+# ===================================
+# Testing & Coverage
+# ===================================
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+junit.xml
+coverage.xml
+
+# Jest
+jest-coverage/
+__tests__/__snapshots__/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# ===================================
+# Logs & Debug Files
+# ===================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ===================================
+# Cache & Temporary Files
+# ===================================
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ESLint cache
+.eslintcache
+
+# Prettier cache
+.prettiercache
+
+# Stylelint cache
+.stylelintcache
+
+# Webpack cache
+.cache/
+.parcel-cache/
+
+# Next.js cache
+.next/
+
+# Nuxt.js cache
+.nuxt/
+
+# Vite cache
+.vite/
+
+# ===================================
+# IDE & Editor Files
+# ===================================
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ IDEA / WebStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===================================
+# Operating System Files
+# ===================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===================================
+# Deployment & Production
+# ===================================
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# AWS
+.aws/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+*.kubeconfig
+
+# ===================================
+# Backup & Temporary Files
+# ===================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ===================================
+# Security & Sensitive Data
+# ===================================
+# Private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Certificates
+*.crt
+*.cer
+*.der
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# ===================================
+# Project Specific
+# ===================================
+# Keep documentation folder
+# !.trae/
+
+# Keep important config files
+# !package.json
+# !package-lock.json
+# !README.md
+
+# Ignore generated documentation
+docs/generated/
+
+# Ignore local development files
+local/
+temp/
+scratch/
+
+# ===================================
+# Optional: Uncomment if needed
+# ===================================
+# Runtime configuration
+# runtime.json
+
+# Local development overrides
+# local.json
+
+# Storybook build outputs
+# storybook-static/
+
+# ===================================
+# End of .gitignore
+# ===================================
