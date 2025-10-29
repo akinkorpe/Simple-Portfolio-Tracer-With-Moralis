@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# 📊 Moralis Portfolio Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern ve kullanıcı dostu bir Ethereum wallet portföy takip uygulaması. Moralis API v2.2 kullanarak gerçek zamanlı kripto varlık verilerini görüntüler.
 
-## Available Scripts
+## ✨ Özellikler
 
-In the project directory, you can run:
+- 🔍 **Wallet Adresi Arama**: Ethereum wallet adreslerini girerek portföy verilerini görüntüleme
+- 💰 **Gerçek Zamanlı Veriler**: Moralis API ile güncel token fiyatları ve değerleri
+- 📈 **24 Saatlik Değişim**: Token fiyatlarındaki günlük değişimleri takip etme
+- 🎨 **Modern UI/UX**: Responsive ve kullanıcı dostu arayüz
+- ⚡ **Hızlı Performans**: Optimize edilmiş React bileşenleri
+- 🌙 **Dark/Light Theme**: Tema değiştirme özelliği
+- 📱 **Responsive Design**: Mobil ve desktop uyumlu tasarım
 
-### `npm start`
+## 🛠️ Teknolojiler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 19.2.0
+- **API**: Moralis Web3 API v2.2
+- **Styling**: CSS3 ile custom styling
+- **State Management**: React Hooks (useState, useEffect)
+- **HTTP Client**: Fetch API
+- **Testing**: Jest & React Testing Library
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Kurulum
 
-### `npm test`
+### Gereksinimler
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v16 veya üzeri)
+- npm veya yarn
+- Moralis API Key
 
-### `npm run build`
+### Adımlar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Projeyi klonlayın**
+   ```bash
+   git clone https://github.com/akinkorpe/Simple-Portfolio-Tracer-With-Moralis.git
+   cd Simple-Portfolio-Tracer-With-Moralis
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Bağımlılıkları yükleyin**
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Environment variables ayarlayın**
+   ```bash
+   # .env dosyası oluşturun ve Moralis API key'inizi ekleyin
+   REACT_APP_MORALIS_API_KEY=your_moralis_api_key_here
+   ```
 
-### `npm run eject`
+4. **Uygulamayı başlatın**
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Uygulama [http://localhost:3000](http://localhost:3000) adresinde çalışacaktır.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📖 Kullanım
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Wallet Adresi Girişi**: Ana sayfada bulunan input alanına geçerli bir Ethereum wallet adresi girin (0x ile başlayan 42 karakter)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Portföy Görüntüleme**: "Fetch Asset" butonuna tıklayarak wallet'taki token'ları görüntüleyin
 
-## Learn More
+3. **Veri İnceleme**: Tabloda token logoları, isimleri, fiyatları, değerleri ve 24 saatlik değişimleri inceleyebilirsiniz
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Yeni Arama**: Farklı wallet adresleri için arama yapabilirsiniz
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Proje Yapısı
 
-### Code Splitting
+```
+src/
+├── components/          # React bileşenleri
+│   ├── Header.js       # Uygulama başlığı ve tema değiştirici
+│   ├── WalletInput.js  # Wallet adresi giriş formu
+│   ├── PortfolioTable.js # Token verilerini gösteren tablo
+│   ├── LoadingSpinner.js # Yükleme animasyonu
+│   ├── ErrorMessage.js # Hata mesajları
+│   └── EmptyState.js   # Boş durum bileşeni
+├── hooks/              # Custom React hooks
+│   ├── usePortfolio.js # Portföy verilerini yönetme
+│   └── useTheme.js     # Tema yönetimi
+├── services/           # API servisleri
+│   └── moralisService.js # Moralis API entegrasyonu
+├── utils/              # Yardımcı fonksiyonlar
+│   └── formatters.js   # Veri formatlama fonksiyonları
+├── styles/             # CSS dosyaları
+│   └── App.css        # Ana stil dosyası
+└── constants/          # Sabit değerler
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔧 API Gereksinimleri
 
-### Analyzing the Bundle Size
+Bu uygulama Moralis Web3 API kullanır. Kullanmak için:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. [Moralis](https://moralis.io/) hesabı oluşturun
+2. API key alın
+3. `.env` dosyasında `REACT_APP_MORALIS_API_KEY` değişkenini ayarlayın
 
-### Making a Progressive Web App
+### Kullanılan API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `/{address}/erc20` - ERC20 token'larını getirme
+- Token metadata ve fiyat bilgileri
 
-### Advanced Configuration
+## 🧪 Test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+# Testleri çalıştır
+npm test
 
-### Deployment
+# Test coverage raporu
+npm test -- --coverage
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🏗️ Build
 
-### `npm run build` fails to minify
+```bash
+# Production build
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Build dosyaları `build/` klasöründe oluşturulacaktır.
+
+## 🤝 Katkıda Bulunma
+
+1. Bu repository'yi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Add some amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
+
+## 📝 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+
+## 👨‍💻 Geliştirici
+
+**Akın Körpe**
+- GitHub: [@akinkorpe](https://github.com/akinkorpe)
+
+## 🙏 Teşekkürler
+
+- [Moralis](https://moralis.io/) - Web3 API sağladığı için
+- [React](https://reactjs.org/) - Güçlü frontend framework'ü için
+- [Create React App](https://create-react-app.dev/) - Hızlı başlangıç için
+
+---
+
+⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
